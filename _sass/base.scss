@@ -1,0 +1,56 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font;
+    background-color: $backgroud-color;
+    color: $color-normal;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0; //デフォは8px
+}
+
+a {
+    color: $color-link;
+    text-decoration: none;
+    padding: 0.75rem;
+}
+
+button {
+    background-color: $backgroud-color;
+    border: none;
+    padding: 0;
+    margin: 0;
+    i {
+        display: block;
+        cursor: pointer;
+        padding: 0.2rem;
+    }
+}
+
+// code block
+pre {
+    background-color: $bg-codeblock;
+    color: $color-codeblock;
+    font-family: $font-codeblock;
+    font-size: 0.8rem;
+    line-height: 1.625;
+    padding: 1rem 0.5rem;
+    overflow-x: auto;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.layout-helper {
+    box-sizing: content-box;
+    margin: auto;
+    max-width: 100%;
+    padding: $padding-mobile;
+    @include media-pc {
+        padding: $padding-pc;
+    }
+}

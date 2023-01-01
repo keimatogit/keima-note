@@ -1,0 +1,32 @@
+
+    <header class="header">
+        <div class="layout-helper">
+            <div class="header-content">
+
+                <div class="header-title-and-hamburger">
+
+                    <div class="header-title">
+                        <a href="{{ site.url }}{{ site.baseurl }}">
+                            {{ site.title }}
+                        </a>
+                    </div>
+
+                    <button class="hamburger header-hamburger">
+                        <i class="fontawesome fas fa-bars fa-fw"></i>
+                    </button>
+                
+                </div>
+                
+                <nav class="header-nav"> <!-- フッターを 右側にまとめるためのもの-->
+                    <ul>
+                        {% for category in site.categories %}
+                        <li class="{% if category.url == page.url %}active{% endif %}">
+                            <a href="{{ site.url }}{{ site.baseurl }}{{ category.url }}">{{ category.name }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul> 
+                </nav>
+
+            </div>
+        </div>
+    </header>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% include head.html %}
+  <body class="note">
+  
+      <!-- toc -->
+      <div class="toc-wrapper sidebar-open">
+        <div class="layout-helper">
+
+          <!-- mobile -->
+          <button class="hamburger toc-hamburger-mobile">
+            <i class="fontawesome fas fa-bars fa-fw"></i>
+          </button>
+          <nav class="toc toc-mobile">
+            {% include toc.html html=content class=toc-content h_min=1 h_max=3%}
+          </nav>  
+
+          <!-- pc -->
+          <button class="hamburger toc-hamburger-pc">
+            <i class="fontawesome fas fa-times fa-fw"></i>
+          </button>
+          <nav class="toc toc-pc">
+            {% include toc.html html=content class=toc-content h_min=1 h_max=3%}
+          </nav>
+
+        </div>
+      </div>
+
+
+
+<!--
+        <div class="sidebar-content">
+          <nav>
+            <div class="breadcrumb">
+              <ol>
+                <li>
+                  <a href="{{ site.url }}">{{ site.title }}</a>
+                </li>
+                {% for category in site.categories %}
+                {% if page.dir contains category.name %}
+                <li>
+                  <a href="{{ category.url }}">{{ category.name }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+              </ol>
+            </div>
+            <div class="toc">
+              {% include toc.html html=content class=toc-content h_min=1 h_max=3%}
+            </div>
+          </nav>
+        </div>
+      </div>
+-->
+      <div class="main-wrapper sidebar-open">
+      <!-- main -->
+        <main class="main sidebar-open">
+          <div class="layout-helper">
+            <div class="main-content">
+              {{ content }}
+            </div>
+          </div>
+        </main>
+        <!-- footer -->
+        {% include footer.html %}
+      </div>
+
+
+  </body>
+</html>

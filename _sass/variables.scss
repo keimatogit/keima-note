@@ -1,0 +1,38 @@
+
+$font: "Inter", "Lato", "Hiragino Maru Gothic Pro", "Meiryo UI", Meiryo, "MS PGothic", sans-serif;
+
+$backgroud-color: white;
+
+$color-normal: #333;
+$color-pale: #999;
+$color-fontawesome: #999;
+$color-link: #06c;
+$color-accent: #06c;
+
+$width-break: 600px;
+$maxwidth-header: 960px;
+$maxwidth-main: 960px;
+$width-sidebar: 240px;
+$width-closed-sidebar: 3rem;
+$padding-mobile: 1.25rem;
+$padding-pc: 1.875rem 2.5rem; //1.875rem 2.5rem;
+$padding-sideber: 1rem 1rem 2.5rem;
+
+// code block
+$font-codeblock: "Menlo", "Consolas", "monaco", "monospace", "Hiragino Maru Gothic Pro", "Meiryo UI", Meiryo, "MS PGothic", sans-serif;
+$color-codeblock: #444;
+$bg-codeblock: #eee;
+
+//PC幅時の設定用
+@mixin media-pc {
+    @media (min-width: $width-break) {
+      @content;
+    }
+}
+
+@mixin flex ($wrap: wrap, $align: center, $justify: start) {
+    display: flex;
+    flex-wrap: $wrap;
+    align-items: $align;
+    justify-content: $justify;
+}

@@ -1,6 +1,6 @@
 title: keima-note
 description: note for myself.
-note-dir: "/note/"
+note-dir:  ../note/
 strict_front_matter: true
 
 defaults:

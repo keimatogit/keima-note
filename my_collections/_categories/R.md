@@ -2,9 +2,9 @@
 layout: index
 name: R
 permalink: /R/
-dir: /note/R/
+category-dir: R/
 ---
 
 # R
 
-- [パッケージの作り方]({{ page.dir }}make_package.html)
+- [パッケージの作り方]({{ site.note-dir }}{{ page.category-dir }}make_package.html)

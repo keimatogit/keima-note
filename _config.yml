@@ -1,9 +1,12 @@
+title: keima-note
+description: note for myself.
+note-dir: "/note/"
+strict_front_matter: true
+
 defaults:
   -
     values:
       layout: "note"
-
-title: note
 
 collections_dir: ./my_collections
 collections:
@@ -12,6 +15,7 @@ collections:
     order:
       - bioinfo.md
       - bash.md
+      - R.md
 
 plugins:
   - jekyll-titles-from-headings

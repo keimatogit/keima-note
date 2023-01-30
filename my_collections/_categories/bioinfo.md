@@ -2,7 +2,7 @@
 layout: index
 name: bioinfo
 permalink: /bioinfo/
-note-dir: ../note/bioinfo/
+category-dir: bioinfo/
 ---
 
 # Bioinfo
@@ -11,7 +11,7 @@ note-dir: ../note/bioinfo/
 
 ## Preproceccing
 
-- [DADA2]({{ page.note-dir }}dada2.html)
+- [DADA2]({{ site.note-dir }}{{ page.category-dir }}dada2.html)
 - [seqkit]()
 - [cutadapt]()
 - [trimmomatic]()
@@ -20,7 +20,7 @@ note-dir: ../note/bioinfo/
 
 ## Assembler
 
-- [MEGAHIT]({{ page.note-dir }}megahit.html)
+- [MEGAHIT]({{ site.note-dir }}{{ page.category-dir }}megahit.html)
 - [spades]()
 - [Trinity]()
 

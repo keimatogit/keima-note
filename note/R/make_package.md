@@ -4,22 +4,6 @@
 [WRITING R PACKAGES IN RSTUDIO](https://ourcodingclub.github.io/tutorials/writing-r-package/) こちらに沿って行います
 [devtools — Rパッケージ作成支援](https://heavywatal.github.io/rstats/devtools.html)
 
-
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
-<!-- code_chunk_output -->
-
-- [パッケージ作成](#パッケージ作成)
-  - [準備](#準備)
-  - [Rスクリプトを用意](#rスクリプトを用意)
-  - [DESCRIPTION作成](#description作成)
-  - [ヘルプメッセージを用意](#ヘルプメッセージを用意)
-  - [データを用意](#データを用意)
-- [pkgdownでwebサイトを作る](#pkgdownでwebサイトを作る)
-- [.Rbuildignoreについて](#rbuildignoreについて)
-- [githubに上げてみよう](#githubに上げてみよう)
-
-<!-- /code_chunk_output -->
-
 ## パッケージ作成
 
 ### 準備

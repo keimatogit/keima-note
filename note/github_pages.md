@@ -25,3 +25,6 @@ bundle exec jekyll serve
 
 [GitHub Pages サイトを作成する](https://docs.github.com/ja/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 
+
+
+ローカルテストの時はmarkdownファイルの冒頭にも空のフロントマターが必要。github pagesではなくても動くんだけど。

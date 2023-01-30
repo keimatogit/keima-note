@@ -68,6 +68,8 @@ Usage: exec_annotation [options] <query>
 
 インプットに圧縮ファイル(fasta.gz)は扱えなかった（21/08/19）。
 
+同時にいくつも実行する場合（各サンプルとかで）、--tmp-dirには個別のフォルダ名を指定すること。
+
 以下ではkofam後、出力ファイルにタブがない行の行末にタブを追加（２列のタブ区切りで読み込むため）して、ヘッダーをつけている。
 --format [detail, detail-tsv, mapper, mapper-one-line]
 ```bash

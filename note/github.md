@@ -35,6 +35,7 @@ git push origin main
 
 リモートリポジトリに変更を反映させる
 - `git add <file1> <file2>` : コミットするファイルを置いておく（インデックスに登録）
+- `git add .`: カレントディレクトリ下を全部add
 - `git commit -m "message"`: ローカルリポジトリにコミット
 - `git push <remote> <branch>`: リモートにプッシュ
 

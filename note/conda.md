@@ -117,3 +117,6 @@ conda install -c conda-forge r-rsqlite r-rmysql r-rmariadb
 conda install -c r rstudio
 ```
 
+## python関連
+
+pythonライブラリの場所：miniconda3/envs/[envname]/lib/python[3.7]/site-packages/

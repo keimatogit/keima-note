@@ -2,7 +2,6 @@
 
 メタゲノムのSNVs(一塩基変異)の探索。入力はレファレンスゲノムデータベースにマッピングしたsamまたはbamファイル。
 
-
 [github](https://github.com/MrOlm/inStrain)
 [InStrain](https://instrain.readthedocs.io/en/latest/)
 
@@ -154,24 +153,22 @@ inStrain profile \
   -s ~/db/mgnify_genomes/human-gut/v2.0.1/UHGG_reps.stb \
   --database_mode
 ```
-${sample}.ISフォルダ内に４つのフォルダができる。
-figures  log  output  raw_data
+${sample}.ISフォルダ内に４つのフォルダができる（figures  log  output  raw_data）。
 
-## 'inStrain profile'の出力
+### 出力
 
-[Expected output](https://instrain.readthedocs.io/en/latest/example_output.html)を参照。
+#### output/
 
-outputフォルダ内
-- *gene_info.tsv
-- *linkage.tsv
-- *scaffold_info.tsv
-- *genome_info.tsv
-- *mapping_info.tsv
-- *SNVs.tsv.gz
+[Expected output - inStrain profile](https://instrain.readthedocs.io/en/latest/example_output.html#instrain-profile)
 
-### （例）output/*scaffold_info.tsv
+- *scaffold_info.tsv: サンプルで見つかったレファレンスscaffoldごとの情報。
+- *mapping_info.tsv: 各scaffoldへのマップ数の情報。ヘッダーラインにリードフィルタリングのパラメータがある。
+- *SNVs.tsv.gz: SNV(Single nucleotide variant)・SNS(Single nucleotide substitution)の情報。
+- *linkage.tsv: 主に生物が遺伝子の水平伝播をおこなっているかどうかを判断するために使用するそうです。
+- *gene_info.tsv: 遺伝子ごとのカバレッジやSNV・SNSの情報。
+- *genome_info.tsv: scaffoldごとではなくゲノムごとのいろんな情報。
 
-サンプルで見つかったレファレンスscaffoldごとの基本的な情報
+##### scaffold_info.tsv
 
 - scaffold: レファレンスのscaffold配列名
 - scaffold: レファレンスのscaffold配列の長さ
@@ -196,9 +193,14 @@ outputフォルダ内
 - population_divergent_sites: 
 
 
+#### figures/
+
+[Expected output - inStrain plot](https://instrain.readthedocs.io/en/latest/example_output.html#instrain-plot)
+
+
 ## Running inStrain compare
 
-inStrain profileの結果をサンプル間で比較する。
+inStrain profileの結果をサンプル間で比較する。比較は総当たりみたい。
 
 ```
 inStrain compare \
@@ -208,6 +210,25 @@ inStrain compare \
   -p 6 \
   -o UHGG_reps.IS.COMPARE \
   --database_mode
+
+# ファイル名は正規表現でも指定できるのでたくさんかける時に便利
+inStrain compare \
+  -i *.IS/ \
+  -s ~/db/mgnify_genomes/human-gut/v2.0.1/UHGG_reps.stb \
+  -p 6 \
+  -o UHGG_reps.IS.COMPARE \
+  --database_mode
 ```
 
-出力ファイルについては、[Expected output - inStrain compare](https://instrain.readthedocs.io/en/latest/example_output.html#instrain-compare)を参照
+-o で指定したフォルダができて、中に４つのフォルダができる（figures  log  output  raw_data）
+
+### 出力
+
+[Expected output - inStrain compare](https://instrain.readthedocs.io/en/latest/example_output.html#instrain-compare)
+
+output/
+- comparisonsTable.tsv: scaffoldごとの（サンプルの）ペアワイズ比較。カバレッジ情報や、共有/非共有SNP数や、ANI。
+- pairwise_SNP_locations.tsv: ペアワイズ比較でのすべての相違点の位置のリスト。大きいファイルなので`--store_mismatch_locations`フラグがある時のみ作成される。
+- genomeWide_compare.tsv: nStrain compare で検出された差異をゲノムレベルでまとめたもの。
+- strain_clusters.tsv: ペアワイズ比較結果からクラスタリングしたもの
+

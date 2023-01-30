@@ -1,8 +1,11 @@
+---
+---
+
 # パッケージの作り方
 
-参考サイト：
-[WRITING R PACKAGES IN RSTUDIO](https://ourcodingclub.github.io/tutorials/writing-r-package/) こちらに沿って行います
-[devtools — Rパッケージ作成支援](https://heavywatal.github.io/rstats/devtools.html)
+参考サイト
+- [WRITING R PACKAGES IN RSTUDIO](https://ourcodingclub.github.io/tutorials/writing-r-package/) こちらに沿って行います
+- [devtools — Rパッケージ作成支援](https://heavywatal.github.io/rstats/devtools.html)
 
 ## パッケージ作成
 
